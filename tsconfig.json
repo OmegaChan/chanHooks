@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+      "rootDir": "./src",
       "outDir": "./dist",
       "noImplicitAny": true,
       "module": "es6",
@@ -10,6 +11,11 @@
       "baseUrl": "./",
       "paths": {
         "@/packages/*": ["./src/packages/*"]
-      } 
-    }
+      },
+      "declaration": true,
+      "declarationDir": "./dist/types",
+    },
+    "include": [
+      "./src"
+    ]
   }
