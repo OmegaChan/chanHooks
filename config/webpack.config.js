@@ -1,5 +1,7 @@
 // webpack.config.js
 const path = require("path");
+const ConvertAliasPlugin = require('../plugin/convert-alias-plugin.js');
+const alias = require('./alias');
 
 module.exports = {
   entry: {
@@ -10,7 +12,7 @@ module.exports = {
     filename: "[name].js",
     clean: true,
     library: {
-      name: 'chanHooks',
+      name: 'chanhooks',
       type: 'umd',
     },
   },
@@ -23,11 +25,11 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new ConvertAliasPlugin(),
+  ],
   resolve: {
-    alias: {
-      // 不能写成 @/packages/*
-      "@/packages": path.resolve(__dirname, '../src/packages')
-    },
+    alias: alias.alias,
     extensions: ['.tsx', '.ts', '.js'],
   },
   optimization: {

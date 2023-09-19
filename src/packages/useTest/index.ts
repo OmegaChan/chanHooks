@@ -2,6 +2,6 @@ import { TestProps } from './type';
 
 export const useTest = (props: TestProps) => {
     const { inArr } = props;
-    const sumNow: number = inArr.reduce((pre, cur) => pre + cur);
+    const sumNow: number = inArr.reduce((pre, cur) => pre + cur, 10);
     return sumNow;
 };
