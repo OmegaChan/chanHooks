@@ -10,10 +10,12 @@
     "moduleResolution": "node",
     "baseUrl": "./",
     "paths": {
-      "@/packages/*": ["./src/packages/*"]
+      "@/packages/*": ["./src/packages/*"],
+      "@/utils/*": ["./src/utils/*"],
     },
     "declaration": true,
     "declarationDir": "./dist/types",
+    "allowSyntheticDefaultImports": true,
   },
   "include": [
     "./src"

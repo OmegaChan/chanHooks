@@ -25,6 +25,19 @@ module.exports = {
       },
     ],
   },
+  externals: {
+    lodash: {
+      commonjs: 'lodash',
+      commonjs2: 'lodash',
+      amd: 'lodash',
+      root: '_',
+    },
+    react: {
+      commonjs: 'react',
+      commonjs2: 'react',
+      amd: 'react',
+    },
+  },
   plugins: [
     new ConvertAliasPlugin(),
   ],

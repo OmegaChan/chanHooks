@@ -15,8 +15,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/lodash": "^4.14.198",
+    "@types/node": "^20.6.3",
+    "@types/react": "^18.2.22",
     "ts-loader": "^9.4.4",
     "typescript": "^5.2.2",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "react": "^18.2.0"
   }
 }
