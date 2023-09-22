@@ -1,0 +1,30 @@
+// {
+//   "presets": [
+//     [
+//       "@babel/preset-env",
+//       {
+//         "useBuiltIns": "usage",
+//         "corejs": "3"
+//       }
+//     ],
+//     "@babel/preset-typescript"
+//   ],
+//   "targets": {
+//     "ie": "8"
+//   },
+//   //添加忽略项
+//   "ignore": [
+//     "./dist"
+//   ]
+// }
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "corejs": "3",
+        "useBuiltIns": "usage"
+      }
+    ]
+  ]
+}

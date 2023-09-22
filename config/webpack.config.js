@@ -20,9 +20,14 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        use: ['babel-loader', 'ts-loader'],
         exclude: /node_modules/,
       },
+      // {
+      //   test: /\.tsx?$/,
+      //   use: ["babel-loader"],
+      //   exclude: /node_modules/, //排除 node_modules 目录
+      // },
     ],
   },
   externals: {
@@ -48,17 +53,16 @@ module.exports = {
   optimization: {
     // 代码分割配置
     splitChunks: {
-      chunks: "all", // 对所有模块都进行分割
+      chunks: "async",
       cacheGroups: {
         default: {
           // 其他没有写的配置会使用上面的默认值
           minSize: 0, // 我们定义的文件体积太小了，所以要改打包的最小文件体积
-          minChunks: 2,
+          minChunks: 3,
           priority: -20,
           reuseExistingChunk: true,
         },
       },
     },
   },
-  mode: 'production',
 };
