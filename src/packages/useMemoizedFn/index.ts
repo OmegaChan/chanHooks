@@ -5,13 +5,8 @@
  * 与 useCallback 可以实现同样的效果, 但是useMemoizedFn 函数地址不会变化，可以用于性能优化
  */
 import { useMemo, useRef } from "react";
-import { isFunction } from '@/utils/index';
+import { isFunction, isDev } from '@/utils/index';
 import { Noop, PickFunction } from './type';
-
-
-
-const isDev =
-  process.env.NODE_ENV === "development" || process.env.NODE_ENV === "test";
 
 console.log({ isDev });
 

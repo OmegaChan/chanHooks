@@ -22,6 +22,7 @@
     [
       "@babel/preset-env",
       {
+        "targets": "ie >= 8",
         "corejs": "3",
         "useBuiltIns": "usage"
       }

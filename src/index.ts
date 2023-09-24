@@ -6,7 +6,10 @@ import { useBoolean } from '@/packages/useBoolean';
 import { useSetState } from '@/packages/useSetState';
 import { useUpdate } from '@/packages/useUpdate';
 import { useMemoizedFn } from '@/packages/useMemoizedFn';
-console.log('chanHooks导入成功了-28');
+import { useLatest } from '@/packages/useLatest';
+import { useMount } from '@/packages/useMount';
+import { useUnmount } from '@/packages/useUnmount';
+console.log('chanHooks导入成功了-29');
 
 export {
     useTest,
@@ -15,4 +18,7 @@ export {
     useSetState,
     useUpdate,
     useMemoizedFn,
+    useLatest,
+    useMount,
+    useUnmount,
 }

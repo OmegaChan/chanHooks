@@ -1,0 +1,1 @@
+export type FnVoid = () => void;
