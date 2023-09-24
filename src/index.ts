@@ -9,7 +9,7 @@ import { useMemoizedFn } from '@/packages/useMemoizedFn';
 import { useLatest } from '@/packages/useLatest';
 import { useMount } from '@/packages/useMount';
 import { useUnmount } from '@/packages/useUnmount';
-console.log('chanHooks导入成功了-29.');
+console.log('chanHooks导入成功了-29');
 
 export {
     useTest,
