@@ -1,16 +1,16 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 import { isFunction, isDev } from '@/utils/index';
 import { useLatest } from '../useLatest';
-import { FnVoid } from "../../type";
+import { type FnVoid } from '../../type';
 
 // 由于react18在开发模式挂载时，会自动卸载一次，所以需关闭严格模式
 console.log({ isDev });
 
-export const useUnmount = (fn: FnVoid) => {
+export const useUnmount = (fn: FnVoid): void => {
   if (isDev) {
     if (!isFunction(fn)) {
       console.error(
-        `useUnmount expected parameter is a function, got ${typeof fn}`
+        `useUnmount expected parameter is a function, got ${typeof fn}`,
       );
     }
   }
@@ -22,6 +22,6 @@ export const useUnmount = (fn: FnVoid) => {
     () => () => {
       fnRef.current();
     },
-    []
+    [],
   );
 };

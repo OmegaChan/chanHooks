@@ -1,14 +1,14 @@
 // 本质是调用了useToggle进行了true和false两个状态的切换
-import { useMemo } from "react";
-import useToggle from "../useToggle";
-import { Actions } from './type';
+import { useMemo } from 'react';
+import useToggle from '../useToggle';
+import { type Actions } from './type';
 
 export const useBoolean = (defaultValue = false): [boolean, Actions] => {
   const [state, { toggle, set }] = useToggle(!!defaultValue);
 
   const actions: Actions = useMemo(() => {
-    const setTrue = () => set(true);
-    const setFalse = () => set(false);
+    const setTrue = (): void => set(true);
+    const setFalse = (): void => set(false);
     return {
       toggle,
       // 强制转换为布尔型
@@ -20,9 +20,9 @@ export const useBoolean = (defaultValue = false): [boolean, Actions] => {
        */
       set: (v) => set(!!v),
       setTrue,
-      setFalse
+      setFalse,
     };
   }, []);
 
   return [state, actions];
-}
+};

@@ -1,5 +1,4 @@
 import _ from 'lodash';
-window._ = _;
 import { useTest } from '@/packages/useTest';
 import useToggle from '@/packages/useToggle';
 import { useBoolean } from '@/packages/useBoolean';
@@ -9,16 +8,17 @@ import { useMemoizedFn } from '@/packages/useMemoizedFn';
 import { useLatest } from '@/packages/useLatest';
 import { useMount } from '@/packages/useMount';
 import { useUnmount } from '@/packages/useUnmount';
-console.log('chanHooks导入成功了-29');
+window._ = _;
+console.log('chanHooks导入成功了-31');
 
 export {
-    useTest,
-    useToggle,
-    useBoolean,
-    useSetState,
-    useUpdate,
-    useMemoizedFn,
-    useLatest,
-    useMount,
-    useUnmount,
-}
+  useTest,
+  useToggle,
+  useBoolean,
+  useSetState,
+  useUpdate,
+  useMemoizedFn,
+  useLatest,
+  useMount,
+  useUnmount,
+};

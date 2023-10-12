@@ -4,18 +4,18 @@
  * 使用 useMemoizedFn，可以省略第二个参数 deps，同时保证函数地址永远不会变化。
  * 与 useCallback 可以实现同样的效果, 但是useMemoizedFn 函数地址不会变化，可以用于性能优化
  */
-import { useMemo, useRef } from "react";
+import { useMemo, useRef } from 'react';
 import { isFunction, isDev } from '@/utils/index';
-import { Noop, PickFunction } from './type';
+import { type Noop, type PickFunction } from './type';
 
 console.log({ isDev });
 
-export const useMemoizedFn = <T extends Noop>(fn: T) => {
+export const useMemoizedFn = <T extends Noop>(fn: T): T => {
   if (isDev) {
     // 开发环境会检测入参是否为函数，给出相应错误提示
     if (!isFunction(fn)) {
       console.error(
-        `useMemoizedFn expected parameter is a function, got ${typeof fn}`
+        `useMemoizedFn expected parameter is a function, got ${typeof fn}`,
       );
     }
   }
@@ -35,6 +35,4 @@ export const useMemoizedFn = <T extends Noop>(fn: T) => {
   }
 
   return memoizedFn.current as T;
-}
- 
- 
+};
