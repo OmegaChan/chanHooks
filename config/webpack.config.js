@@ -1,15 +1,16 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 // webpack.config.js
-const path = require("path");
+const path = require('path');
 const ConvertAliasPlugin = require('../plugin/convert-alias-plugin.js');
 const alias = require('./alias');
 
 module.exports = {
   entry: {
-    index: "./src/index.ts",
+    index: './src/index.ts',
   },
   output: {
-    path: path.resolve(__dirname, "../dist"),
-    filename: "[name].js",
+    path: path.resolve(__dirname, '../dist'),
+    filename: '[name].js',
     clean: true,
     library: {
       name: 'chanhooks',
@@ -43,9 +44,7 @@ module.exports = {
       amd: 'react',
     },
   },
-  plugins: [
-    new ConvertAliasPlugin(),
-  ],
+  plugins: [new ConvertAliasPlugin()],
   resolve: {
     alias: alias.alias,
     extensions: ['.tsx', '.ts', '.js'],
@@ -53,7 +52,7 @@ module.exports = {
   optimization: {
     // 代码分割配置
     splitChunks: {
-      chunks: "async",
+      chunks: 'async',
       cacheGroups: {
         default: {
           // 其他没有写的配置会使用上面的默认值

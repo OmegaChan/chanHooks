@@ -1,6 +1,6 @@
-import { useCallback, useState } from "react";
+import { useCallback, useState } from 'react';
 import { isFunction } from '@/utils/index';
-import { SetState } from './type';
+import { type SetState } from './type';
 // 管理 object 类型 state 的 Hooks,使用--会自动合并对象
 // const [state, setState] = useSetState<T>(initialState);
 
@@ -12,7 +12,7 @@ import { SetState } from './type';
 // ) => void;
 
 export const useSetState = <S extends Record<string, any>>(
-  initialState: S | (() => S)
+  initialState: S | (() => S),
 ): [S, SetState<S>] => {
   const [state, setState] = useState<S>(initialState);
 
@@ -25,4 +25,3 @@ export const useSetState = <S extends Record<string, any>>(
 
   return [state, setMergeState];
 };
-

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "rootDir": "./src",
+    "rootDir": "./",
     "outDir": "./dist",
     "noImplicitAny": true,
     "module": "es6",
@@ -18,10 +18,13 @@
     // "emitDeclarationOnly": true,
     // "localPublish": "npm run build && tsc --emitDeclarationOnly && yalc publish"
     // "isolatedModules": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true
   },
   "include": [
-    "./src"
+    "./src",
+    "./plugin",
+    "./config",
   ],
   "exclude": ["./node_modules"]
 }
