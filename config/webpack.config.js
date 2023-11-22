@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 // webpack.config.js
 const path = require('path');
-const ConvertAliasPlugin = require('../plugin/convert-alias-plugin.js');
+// const ConvertAliasPlugin = require('../plugin/convert-alias-plugin.js');
 const alias = require('./alias');
 
 module.exports = {
@@ -19,16 +19,16 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.tsx?$/,
-        use: ['babel-loader', 'ts-loader'],
-        exclude: /node_modules/,
-      },
       // {
       //   test: /\.tsx?$/,
-      //   use: ["babel-loader"],
-      //   exclude: /node_modules/, //排除 node_modules 目录
+      //   use: ['babel-loader', 'ts-loader'],
+      //   exclude: /node_modules/,
       // },
+      {
+        test: /\.tsx?$/, // 解析ts
+        loader: 'swc-loader', // 使用新技术swc-loader
+        exclude: /node_modules/,
+      },
     ],
   },
   externals: {
@@ -44,7 +44,7 @@ module.exports = {
       amd: 'react',
     },
   },
-  plugins: [new ConvertAliasPlugin()],
+  // plugins: [new ConvertAliasPlugin()],
   resolve: {
     alias: alias.alias,
     extensions: ['.tsx', '.ts', '.js'],

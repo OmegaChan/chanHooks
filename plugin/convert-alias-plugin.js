@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 // convert-alias-plugin
+// 已使用tsc-alias进行替代
 const path = require('path');
 const fs = require('fs');
 

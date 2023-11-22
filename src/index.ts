@@ -9,7 +9,8 @@ import { useLatest } from '@/packages/useLatest';
 import { useMount } from '@/packages/useMount';
 import { useUnmount } from '@/packages/useUnmount';
 window._ = _;
-console.log('chanHooks导入成功了-31');
+
+console.log('chanhooks导入成功');
 
 export {
   useTest,
