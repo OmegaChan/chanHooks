@@ -8,9 +8,20 @@ import { useMemoizedFn } from '@/packages/useMemoizedFn';
 import { useLatest } from '@/packages/useLatest';
 import { useMount } from '@/packages/useMount';
 import { useUnmount } from '@/packages/useUnmount';
+import { useGetTime } from '@/packages/useGetTime';
+import { useStrAndObj } from '@/packages/useStrAndObj';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { version } = require('../package.json');
 window._ = _;
 
-console.log('chanhooks导入成功');
+const { getDatePre, getDetailTime } = useGetTime();
+const [, timeNow] = getDatePre({
+  preNum: 0,
+});
+
+console.log(
+  `✨✨✨chanHooks已生效-版本号:${version}-生效时间:${timeNow}-${getDetailTime()}`,
+);
 
 export {
   useTest,
@@ -22,4 +33,6 @@ export {
   useLatest,
   useMount,
   useUnmount,
+  useGetTime,
+  useStrAndObj,
 };

@@ -28,5 +28,6 @@ module.exports = {
         "@typescript-eslint/strict-boolean-expressions": ["off"], // 关闭条件判断时，严格的布尔值判断
         "@typescript-eslint/space-before-function-paren": ["off"], // 关闭函数后空格
         "space-before-function-paren": ["off"],
+        "@typescript-eslint/array-type": ["off"], // 允许使用尖括号语法
     },
 }
