@@ -84,3 +84,5 @@ const [state, { toggle, set, setTrue, setFalse }] = useBoolean(
 #### useGetTime
 
 #### useStrAndObj
+
+#### useMockApi

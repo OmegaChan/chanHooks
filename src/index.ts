@@ -10,6 +10,7 @@ import { useMount } from '@/packages/useMount';
 import { useUnmount } from '@/packages/useUnmount';
 import { useGetTime } from '@/packages/useGetTime';
 import { useStrAndObj } from '@/packages/useStrAndObj';
+import { useMockApi } from '@/packages/useMockApi';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { version } = require('../package.json');
 window._ = _;
@@ -35,4 +36,5 @@ export {
   useUnmount,
   useGetTime,
   useStrAndObj,
+  useMockApi,
 };
