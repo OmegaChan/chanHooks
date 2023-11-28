@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import _ from 'lodash';
 import { useTest } from '@/packages/useTest';
 import useToggle from '@/packages/useToggle';
@@ -20,9 +21,11 @@ const [, timeNow] = getDatePre({
   preNum: 0,
 });
 
-console.log(
-  `✨✨✨chanHooks已生效-版本号:${version}-生效时间:${timeNow}-${getDetailTime()}`,
-);
+useEffect(() => {
+  console.log(
+    `✨✨✨chanHooks已生效-版本号:${version}-生效时间:${timeNow}-${getDetailTime()}`,
+  );
+}, []);
 
 export {
   useTest,
