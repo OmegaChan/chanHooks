@@ -1,6 +1,6 @@
 {
   "name": "chanhooks",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.3",
   "description": "",
   "main": "./dist/index.js",
   "files": [
@@ -12,8 +12,8 @@
     "buildDev": "npx webpack --config ./config/webpack.config.js --mode development",
     "buildPrd": "npx webpack --config ./config/webpack.config.js --mode production",
     "emitType": "tsc --emitDeclarationOnly && tsc-alias",
-    "localPublishDev": "npm run buildDev && npm run emitType && yalc publish --replace --changed",
-    "localPublishPrd": "npm run buildPrd && npm run emitType && yalc publish --replace --changed"
+    "localPublishDev": "npm run buildDev && npm run emitType && yalc publish",
+    "localPublishPrd": "npm run buildPrd && npm run emitType && yalc publish"
   },
   "keywords": [],
   "author": "",
