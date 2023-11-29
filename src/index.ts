@@ -21,11 +21,11 @@ const [, timeNow] = getDatePre({
   preNum: 0,
 });
 
-useEffect(() => {
+window.onload = () => {
   console.log(
     `✨✨✨chanHooks已生效-版本号:${version}-生效时间:${timeNow}-${getDetailTime()}`,
   );
-}, []);
+};
 
 export {
   useTest,
