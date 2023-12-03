@@ -16,6 +16,7 @@ import { useMockApi } from '@/packages/useMockApi';
 const { version } = require('../package.json');
 window._ = _;
 
+// 由于useGetTime在此为非严格意义上的React Hooks，故在这里可以直接使用，而非要在React函数组件中使用
 const { getDatePre, getDetailTime } = useGetTime();
 const [, timeNow] = getDatePre({
   preNum: 0,
