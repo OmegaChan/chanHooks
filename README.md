@@ -1,13 +1,18 @@
 ## 1. link
 - codesandbox： https://codesandbox.io/u/omegachan
+
 ## 2. usage
+
 ### 2.1 Use of npm packages
 ```bash
 npm i chanhooks
 pnpm i chanhooks
 yarn add chanhooks
 ```
-### 2.2 Debugging and development
+### 2.2 hooks details list
+See hooksList.md for details
+
+### 2.3 Debugging and development
 github warehouse address: https://github.com/OmegaChan/chanHooks
 ```
 git clone [link]
@@ -17,8 +22,10 @@ npm run localPublishDev
 # in your project
 yalc add chanhooks
 ```
+
 ## 3. Generalization
 A tool function library suitable for react.
+
 ## 4. Configuration process
 1. The basic file output process of webpack and ts-loader, including converted js files and declaration files.
 2. In order to solve the problem that the alias configuration in the output declaration file is not compiled correctly, the plugin ConvertAliasPlugin is customized to solve this problem.
